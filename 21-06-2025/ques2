@@ -1,0 +1,9 @@
+import java.io.*;
+
+int countLines(String filename) throws IOException {
+    BufferedReader reader = new BufferedReader(new FileReader(filename));
+    int lines = 0;
+    while (reader.readLine() != null) lines++;
+    reader.close();
+    return lines;
+}
